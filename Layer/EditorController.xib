@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditorController" customModule="Layer" customModuleProvider="target">
+            <connections>
+                <outlet property="editorView" destination="vP1-qA-Zaj" id="qKs-uz-cSF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ov7-H6-tZK">
+                    <rect key="frame" x="0.0" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="caX-an-qFV"/>
+                        <constraint firstAttribute="width" constant="44" id="gzs-wb-ae4"/>
+                    </constraints>
+                    <state key="normal" title="添加"/>
+                    <connections>
+                        <action selector="addCell:" destination="-1" eventType="touchUpInside" id="hUY-Yr-27Z"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vP1-qA-Zaj" customClass="EditorView" customModule="Layer" customModuleProvider="target">
+                    <rect key="frame" x="44" y="108" width="287" height="515"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="leK-oM-9Qg">
+                    <rect key="frame" x="88" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="JNv-4X-ew3"/>
+                        <constraint firstAttribute="width" constant="44" id="fh3-uL-90A"/>
+                    </constraints>
+                    <state key="normal" title="redo"/>
+                    <connections>
+                        <action selector="redo:" destination="-1" eventType="touchUpInside" id="rwj-ot-qcs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3J7-gg-Lse">
+                    <rect key="frame" x="44" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="9Y7-X6-p9k"/>
+                        <constraint firstAttribute="width" constant="44" id="SXO-wm-ELF"/>
+                    </constraints>
+                    <state key="normal" title="undo"/>
+                    <connections>
+                        <action selector="undo:" destination="-1" eventType="touchUpInside" id="imV-dQ-FCV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KON-ps-rgy">
+                    <rect key="frame" x="132" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="cPQ-DL-0u6"/>
+                        <constraint firstAttribute="width" constant="44" id="gfJ-hU-GMZ"/>
+                    </constraints>
+                    <state key="normal" title="图片"/>
+                    <connections>
+                        <action selector="addImageCell:" destination="-1" eventType="touchUpInside" id="Bou-05-ZNs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g1b-6W-0tT">
+                    <rect key="frame" x="176" y="64" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="0fJ-CX-rkE"/>
+                        <constraint firstAttribute="width" constant="44" id="QPO-Yy-BQU"/>
+                    </constraints>
+                    <state key="normal" title="文本"/>
+                    <connections>
+                        <action selector="addTextCell:" destination="-1" eventType="touchUpInside" id="qYP-to-0ay"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+            <constraints>
+                <constraint firstItem="KON-ps-rgy" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="0b9-4M-fyf"/>
+                <constraint firstItem="KON-ps-rgy" firstAttribute="leading" secondItem="leK-oM-9Qg" secondAttribute="trailing" id="4r4-5b-c0d"/>
+                <constraint firstItem="vP1-qA-Zaj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="8Vz-We-kh1"/>
+                <constraint firstItem="g1b-6W-0tT" firstAttribute="leading" secondItem="KON-ps-rgy" secondAttribute="trailing" id="9HA-Y0-m8i"/>
+                <constraint firstAttribute="trailing" secondItem="vP1-qA-Zaj" secondAttribute="trailing" constant="44" id="SAj-2v-j3T"/>
+                <constraint firstItem="ov7-H6-tZK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="TLG-d1-eIO"/>
+                <constraint firstItem="vP1-qA-Zaj" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="108" id="egm-Cv-vLe"/>
+                <constraint firstAttribute="bottom" secondItem="vP1-qA-Zaj" secondAttribute="bottom" constant="44" id="fLU-Ph-wcs"/>
+                <constraint firstItem="3J7-gg-Lse" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="gTB-Y3-hlO"/>
+                <constraint firstItem="leK-oM-9Qg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="jQ9-fw-3uD"/>
+                <constraint firstItem="g1b-6W-0tT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="64" id="k1N-Ma-dfP"/>
+                <constraint firstItem="ov7-H6-tZK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s9g-S8-kBz"/>
+                <constraint firstItem="leK-oM-9Qg" firstAttribute="leading" secondItem="3J7-gg-Lse" secondAttribute="trailing" id="ybq-OU-Zvs"/>
+                <constraint firstItem="3J7-gg-Lse" firstAttribute="leading" secondItem="ov7-H6-tZK" secondAttribute="trailing" id="zT2-dq-jlm"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

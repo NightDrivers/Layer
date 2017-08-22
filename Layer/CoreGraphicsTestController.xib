@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoreGraphicsTestController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mVj-f6-ss4" customClass="CoreGraphicsView">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8l1-bM-02U">
+                            <rect key="frame" x="275" y="22" width="100" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="4Ep-tI-vtq"/>
+                                <constraint firstAttribute="height" constant="44" id="cXf-jn-sWS"/>
+                            </constraints>
+                            <state key="normal" title="dismiss"/>
+                            <connections>
+                                <action selector="dismissAction:" destination="-1" eventType="touchUpInside" id="5I1-60-NnO"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="8l1-bM-02U" secondAttribute="trailing" id="P3p-hw-W2v"/>
+                        <constraint firstItem="8l1-bM-02U" firstAttribute="top" secondItem="mVj-f6-ss4" secondAttribute="top" constant="22" id="l7f-Bf-lIS"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="mVj-f6-ss4" secondAttribute="bottom" id="biR-CS-VBP"/>
+                <constraint firstItem="mVj-f6-ss4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fJs-cp-sia"/>
+                <constraint firstItem="mVj-f6-ss4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="g6o-2U-fMe"/>
+                <constraint firstAttribute="trailing" secondItem="mVj-f6-ss4" secondAttribute="trailing" id="oxY-YH-sWE"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
